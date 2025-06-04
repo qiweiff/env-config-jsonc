@@ -1,0 +1,30 @@
+{
+    "name": "env-config-jsonc",
+    "version": "0.0.1",
+    "description": "env-config-jsonc 是一个轻量级 Node.js 环境配置加载工具，支持 JSONC（JSON with Comments） 格式的配置文件解析。它允许开发者通过简单的 API 加载和合并多层级配置，并自动挂载到 Node.js 的 process.envconfig 上，方便全局访问",
+    "author": "qiwei",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "typescript": "^4.9.5"
+    },
+    "dependencies": {
+        "jsonc-parser": "^3.3.1"
+    },
+    "keywords": [
+        "config",
+        "jsonc",
+        "configuration",
+        "env",
+        "loader"
+    ]
+}
