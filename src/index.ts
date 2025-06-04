@@ -51,11 +51,19 @@ function readJsoncFile(filePath: string): unknown {
 }
 /**
  * 加载配置文件
- * 默认加载"env.config.jsonc"
- * @param options 
- * @returns 
+ * @param options 加载选项
+ * @returns 是否加载成功
+ * @throws 加载或解析失败时抛出错误
+ * 
+ * @example
+ * // 加载默认配置文件 (env.config.jsonc)
+ * loadconfig();
+ * 
+ * @example
+ * // 加载自定义路径配置文件
+ * loadconfig({ path: 'custom.config.jsonc' });
  */
-function loadconfig(options: { path?: string } = {}) {
+function loadconfig(options: { path?: string } = {}): boolean {
     try {
         if (!process.envconfig) {
             process.envconfig = {}
